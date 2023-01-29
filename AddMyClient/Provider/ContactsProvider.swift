@@ -16,6 +16,10 @@ final class ContactsProvider {
      // MARK: - 2. create constant to load container
     private let persistentContainer: NSPersistentContainer
     
+    var viewContext: NSManagedObjectContext {
+        persistentContainer.viewContext
+    }
+    
     private init() {
         persistentContainer = NSPersistentContainer(name: "ClientsDataModel")
          // MARK: - 3. file watches for changes and merges all changes

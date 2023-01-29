@@ -9,13 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach((0...8), id: \.self) { item in
+                    
+                    VStack {
+                        Text("Name")
+                            .font(.system(size: 26, design: .rounded).bold())
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .overlay(alignment: .topTrailing) {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "star")
+                                .font(.title3)
+                                .symbolVariant(.fill)
+                                .foregroundColor(.gray.opacity(0.3))
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
