@@ -11,6 +11,9 @@
 		585107032983304700C666DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585107022983304700C666DC /* ContentView.swift */; };
 		585107052983304800C666DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585107042983304800C666DC /* Assets.xcassets */; };
 		585107082983304800C666DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585107072983304800C666DC /* Preview Assets.xcassets */; };
+		585107102983307900C666DC /* ClientsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5851070E2983307900C666DC /* ClientsDataModel.xcdatamodeld */; };
+		585107122983375F00C666DC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585107112983375F00C666DC /* Client.swift */; };
+		58DC4EC129860A6E005FA09B /* ContactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC4EC029860A6E005FA09B /* ContactsProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		585107022983304700C666DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		585107042983304800C666DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		585107072983304800C666DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5851070F2983307900C666DC /* ClientsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientsDataModel.xcdatamodel; sourceTree = "<group>"; };
+		585107112983375F00C666DC /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		58DC4EC029860A6E005FA09B /* ContactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 		585106FF2983304700C666DC /* AddMyClient */ = {
 			isa = PBXGroup;
 			children = (
+				58510713298337F600C666DC /* Model */,
 				585107002983304700C666DC /* AddMyClientApp.swift */,
+				58DC4EBF29860A1A005FA09B /* Provider */,
 				585107022983304700C666DC /* ContentView.swift */,
+				5851070E2983307900C666DC /* ClientsDataModel.xcdatamodeld */,
 				585107042983304800C666DC /* Assets.xcassets */,
 				585107062983304800C666DC /* Preview Content */,
 			);
@@ -65,6 +74,22 @@
 				585107072983304800C666DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58510713298337F600C666DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				585107112983375F00C666DC /* Client.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58DC4EBF29860A1A005FA09B /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				58DC4EC029860A6E005FA09B /* ContactsProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585107102983307900C666DC /* ClientsDataModel.xcdatamodeld in Sources */,
+				58DC4EC129860A6E005FA09B /* ContactsProvider.swift in Sources */,
 				585107032983304700C666DC /* ContentView.swift in Sources */,
+				585107122983375F00C666DC /* Client.swift in Sources */,
 				585107012983304700C666DC /* AddMyClientApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +367,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5851070E2983307900C666DC /* ClientsDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5851070F2983307900C666DC /* ClientsDataModel.xcdatamodel */,
+			);
+			currentVersion = 5851070F2983307900C666DC /* ClientsDataModel.xcdatamodel */;
+			path = ClientsDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 585106F52983304700C666DC /* Project object */;
 }
