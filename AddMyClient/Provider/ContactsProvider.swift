@@ -20,6 +20,10 @@ final class ContactsProvider {
         persistentContainer.viewContext
     }
     
+    var newContext: NSManagedObjectContext {
+        persistentContainer.newBackgroundContext()
+    }
+    
     private init() {
         persistentContainer = NSPersistentContainer(name: "ClientsDataModel")
          // MARK: - 3. file watches for changes and merges all changes

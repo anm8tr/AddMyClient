@@ -10,35 +10,39 @@ import SwiftUI
 struct CreateContactView: View {
     
     @Environment(\.dismiss) private var dismiss
-    //@ObservedObject var vm: EditClientViewModel
+    @ObservedObject var vm: EditContactViewModel
     
-     // MARK: - check for empty text fileds & generate error message
+     // MARK: - check for empty text fields & generate error message
     @State private var hasError: Bool = false
     
     var body: some View {
         
         List {
             Section("Basic Info") {
-                TextField("Name", text: .constant(""))
+                TextField("Name", text: $vm.contact.name)
                     .keyboardType(.namePhonePad)
-                TextField("Phone", text: .constant(""))
+                TextField("Phone", text: $vm.contact.phoneNumber)
                     .keyboardType(.phonePad)
-                TextField("Email", text: .constant(""))
+                TextField("Alternate Phone", text: $vm.contact.alternatePhone)
+                    .keyboardType(.phonePad)
+                TextField("Company", text: $vm.contact.companyName)
+                    .keyboardType(.namePhonePad)
+                TextField("Email", text: $vm.contact.email)
                     .keyboardType(.emailAddress)
             }
             Section("Billing Address") {
-                TextField("Address", text: .constant(""))
+                TextField("Address", text: $vm.contact.address)
                     .keyboardType(.namePhonePad)
-                TextField("City", text: .constant(""))
+                TextField("City", text: $vm.contact.city)
                     .keyboardType(.namePhonePad)
-                TextField("State", text: .constant(""))
+                TextField("State", text: $vm.contact.state)
                     .keyboardType(.namePhonePad)
-                TextField("Zip", text: .constant(""))
+                TextField("Zip", text: $vm.contact.zipcode)
                     .keyboardType(.namePhonePad)
             }
             Section("Notes") {
                 TextField("",
-                          text: .constant(""),
+                          text: $vm.contact.notes,
                           axis: .vertical)
                     
             }
@@ -47,6 +51,12 @@ struct CreateContactView: View {
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") {
+                    do {
+                        try vm.save()
+                        dismiss()
+                    } catch {
+                        print(error)
+                    }
                      // MARK: - validate text fields extension
                     //validate()
                 }
@@ -83,8 +93,7 @@ struct CreateContactView: View {
 struct CreateClientView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            let preview = ContactsProvider.shared
-            CreateContactView()
+            CreateContactView(vm: .init(provider: .shared))
         }
     }
 }

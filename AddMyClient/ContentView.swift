@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State private var isShowingNewContact = false
     
+    var provider = ContactsProvider.shared
+    
     var body: some View {
         NavigationStack {
             List {
@@ -39,7 +41,7 @@ struct ContentView: View {
             }
             .sheet(isPresented: $isShowingNewContact, content: {
                 NavigationStack {
-                    CreateContactView()
+                    CreateContactView(vm: .init(provider: provider))
                 }
             })
             .navigationTitle("Clients")

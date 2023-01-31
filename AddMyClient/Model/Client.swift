@@ -9,13 +9,13 @@ import Foundation
 import CoreData
 
  // MARK: - create model for data
-final class Contact: NSManagedObject, Identifiable {
+final class Client: NSManagedObject, Identifiable {
     
     @NSManaged var name: String
     @NSManaged var address: String
     @NSManaged var city: String
     @NSManaged var state: String
-    @NSManaged var zip: String
+    @NSManaged var zipcode: String
     @NSManaged var phoneNumber: String
     @NSManaged var alternatePhone: String
     @NSManaged var email: String

@@ -17,6 +17,11 @@ struct ContactDetailView: View {
             Section("General") {
                 
                 LabeledContent {
+                    Text("Company name")
+                } label: {
+                    Text("Company")
+                }
+                LabeledContent {
                     Text("Email Here")
                 } label: {
                     Text("Email")
@@ -24,6 +29,11 @@ struct ContactDetailView: View {
                 
                 LabeledContent {
                     Text("Phone number here")
+                } label: {
+                    Text("Phone Number")
+                }
+                LabeledContent {
+                    Text("Alternate phone")
                 } label: {
                     Text("Phone Number")
                 }
