@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		583DB4DA298625CF00152056 /* ContactRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583DB4D9298625CF00152056 /* ContactRowView.swift */; };
+		583DB4DC298627E100152056 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583DB4DB298627E100152056 /* ContactDetailView.swift */; };
+		583DB4DE29862CD300152056 /* CreateContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583DB4DD29862CD300152056 /* CreateContactView.swift */; };
 		585107012983304700C666DC /* AddMyClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585107002983304700C666DC /* AddMyClientApp.swift */; };
 		585107032983304700C666DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585107022983304700C666DC /* ContentView.swift */; };
 		585107052983304800C666DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585107042983304800C666DC /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		583DB4D9298625CF00152056 /* ContactRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRowView.swift; sourceTree = "<group>"; };
+		583DB4DB298627E100152056 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		583DB4DD29862CD300152056 /* CreateContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactView.swift; sourceTree = "<group>"; };
 		585106FD2983304700C666DC /* AddMyClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddMyClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585107002983304700C666DC /* AddMyClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMyClientApp.swift; sourceTree = "<group>"; };
 		585107022983304700C666DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +67,9 @@
 				585107002983304700C666DC /* AddMyClientApp.swift */,
 				58DC4EBF29860A1A005FA09B /* Provider */,
 				585107022983304700C666DC /* ContentView.swift */,
+				583DB4DB298627E100152056 /* ContactDetailView.swift */,
+				583DB4D9298625CF00152056 /* ContactRowView.swift */,
+				583DB4DD29862CD300152056 /* CreateContactView.swift */,
 				5851070E2983307900C666DC /* ClientsDataModel.xcdatamodeld */,
 				585107042983304800C666DC /* Assets.xcassets */,
 				585107062983304800C666DC /* Preview Content */,
@@ -164,8 +173,11 @@
 			files = (
 				585107102983307900C666DC /* ClientsDataModel.xcdatamodeld in Sources */,
 				58DC4EC129860A6E005FA09B /* ContactsProvider.swift in Sources */,
+				583DB4DC298627E100152056 /* ContactDetailView.swift in Sources */,
 				585107032983304700C666DC /* ContentView.swift in Sources */,
 				585107122983375F00C666DC /* Client.swift in Sources */,
+				583DB4DE29862CD300152056 /* CreateContactView.swift in Sources */,
+				583DB4DA298625CF00152056 /* ContactRowView.swift in Sources */,
 				585107012983304700C666DC /* AddMyClientApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
