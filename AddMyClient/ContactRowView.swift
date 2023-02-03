@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct ContactRowView: View {
+    
+    @Environment(\.managedObjectContext) private var moc
+    
+    @ObservedObject var contact: Contact
+    
     var body: some View {
         
         VStack {
-            Text("Name")
+            Text(contact.name)
                 .font(.system(size: 26, design: .rounded).bold())
         }
         .padding(5)
@@ -30,8 +35,8 @@ struct ContactRowView: View {
     }
 }
 
-struct ContactRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContactRowView()
-    }
-}
+//struct ContactRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContactRowView()
+//    }
+//}

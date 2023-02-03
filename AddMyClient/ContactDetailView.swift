@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContactDetailView: View {
     
-    //let contact: Contact
+    let contact: Contact
     
     var body: some View {
         List {
@@ -17,57 +17,57 @@ struct ContactDetailView: View {
             Section("General") {
                 
                 LabeledContent {
-                    Text("Company name")
+                    Text(contact.companyName)
                 } label: {
                     Text("Company")
                 }
                 LabeledContent {
-                    Text("Email Here")
+                    Text(contact.email)
                 } label: {
                     Text("Email")
                 }
                 
                 LabeledContent {
-                    Text("Phone number here")
+                    Text(contact.phoneNumber)
                 } label: {
                     Text("Phone Number")
                 }
                 LabeledContent {
-                    Text("Alternate phone")
+                    Text(contact.alternatePhone)
                 } label: {
-                    Text("Phone Number")
+                    Text("Alt Phone Number")
                 }
                 
             }
             
             Section("Billing Address") {
                 LabeledContent {
-                    Text("Billing Address")
+                    Text(contact.address)
                 } label: {
                     Text("Address")
                 }
                 
                 LabeledContent {
-                    Text("City")
+                    Text(contact.city)
                 } label: {
                     Text("City")
                 }
                 
                 LabeledContent {
-                    Text("State")
+                    Text(contact.state)
                 } label: {
                     Text("State")
                 }
                 
                 LabeledContent {
-                    Text("Zipcode")
+                    Text(contact.zipcode)
                 } label: {
                     Text("Zipcode")
                 }
             }
             
             Section("Notes") {
-                Text("Lorem ipsum blah blah blah")
+                Text(contact.notes)
             }
         }
         .navigationTitle("Client Details")
@@ -75,10 +75,10 @@ struct ContactDetailView: View {
 
 }
 
-struct ContactDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            ContactDetailView()
-        }
-    }
-}
+//struct ContactDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationStack {
+//            ContactDetailView()
+//        }
+//    }
+//}

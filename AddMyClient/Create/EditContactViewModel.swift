@@ -11,13 +11,13 @@ import CoreData
 
 final class EditContactViewModel: ObservableObject {
     
-    @Published var contact: Client
+    @Published var contact: Contact
     
     private let context: NSManagedObjectContext
     
-    init(provider: ContactsProvider, contact: Client? = nil) {
+    init(provider: ContactsProvider, contact: Contact? = nil) {
         self.context = provider.newContext
-        self.contact = Client(context: self.context)
+        self.contact = Contact(context: self.context)
     }
     
     func save() throws {

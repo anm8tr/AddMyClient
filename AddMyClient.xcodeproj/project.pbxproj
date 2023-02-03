@@ -15,7 +15,7 @@
 		585107052983304800C666DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585107042983304800C666DC /* Assets.xcassets */; };
 		585107082983304800C666DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585107072983304800C666DC /* Preview Assets.xcassets */; };
 		585107102983307900C666DC /* ClientsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5851070E2983307900C666DC /* ClientsDataModel.xcdatamodeld */; };
-		585107122983375F00C666DC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585107112983375F00C666DC /* Client.swift */; };
+		585107122983375F00C666DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585107112983375F00C666DC /* Contact.swift */; };
 		58A184622988ACE6007F6FFE /* EditContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A184612988ACE6007F6FFE /* EditContactViewModel.swift */; };
 		58DC4EC129860A6E005FA09B /* ContactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC4EC029860A6E005FA09B /* ContactsProvider.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +30,7 @@
 		585107042983304800C666DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		585107072983304800C666DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5851070F2983307900C666DC /* ClientsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientsDataModel.xcdatamodel; sourceTree = "<group>"; };
-		585107112983375F00C666DC /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		585107112983375F00C666DC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		58A184612988ACE6007F6FFE /* EditContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewModel.swift; sourceTree = "<group>"; };
 		58DC4EC029860A6E005FA09B /* ContactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +90,7 @@
 		58510713298337F600C666DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				585107112983375F00C666DC /* Client.swift */,
+				585107112983375F00C666DC /* Contact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 				583DB4DC298627E100152056 /* ContactDetailView.swift in Sources */,
 				58A184622988ACE6007F6FFE /* EditContactViewModel.swift in Sources */,
 				585107032983304700C666DC /* ContentView.swift in Sources */,
-				585107122983375F00C666DC /* Client.swift in Sources */,
+				585107122983375F00C666DC /* Contact.swift in Sources */,
 				583DB4DE29862CD300152056 /* CreateContactView.swift in Sources */,
 				583DB4DA298625CF00152056 /* ContactRowView.swift in Sources */,
 				585107012983304700C666DC /* AddMyClientApp.swift in Sources */,
