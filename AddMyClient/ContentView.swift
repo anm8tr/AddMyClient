@@ -32,6 +32,26 @@ struct ContentView: View {
                                 }
                                 .opacity(0)
                                 ContactRowView(contact: contact)
+                                    .swipeActions(allowsFullSwipe: true) {
+                                        Button(role: .destructive) {
+                                            
+//                                            do {
+//                                                try provider.delete(contact, in: provider.newContext)
+//                                            } catch {
+//                                                print(error)
+//                                            }
+                                        } label: {
+                                            Label("Delete", systemImage: "trash")
+                                        }
+                                        .tint(.red)
+                                        
+                                        Button {
+                                            //clientToEdit = contact
+                                        } label: {
+                                            Label("Edit", systemImage: "pencil")
+                                        }
+                                        .tint(.orange)
+                                    }
                             }
                            
                         }
