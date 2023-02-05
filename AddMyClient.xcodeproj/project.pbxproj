@@ -17,6 +17,7 @@
 		585107102983307900C666DC /* ClientsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5851070E2983307900C666DC /* ClientsDataModel.xcdatamodeld */; };
 		585107122983375F00C666DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585107112983375F00C666DC /* Contact.swift */; };
 		58A184622988ACE6007F6FFE /* EditContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A184612988ACE6007F6FFE /* EditContactViewModel.swift */; };
+		58A184652990178E007F6FFE /* NoContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A184642990178E007F6FFE /* NoContactsView.swift */; };
 		58DC4EC129860A6E005FA09B /* ContactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC4EC029860A6E005FA09B /* ContactsProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		5851070F2983307900C666DC /* ClientsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		585107112983375F00C666DC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		58A184612988ACE6007F6FFE /* EditContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewModel.swift; sourceTree = "<group>"; };
+		58A184642990178E007F6FFE /* NoContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContactsView.swift; sourceTree = "<group>"; };
 		58DC4EC029860A6E005FA09B /* ContactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,11 +67,12 @@
 		585106FF2983304700C666DC /* AddMyClient */ = {
 			isa = PBXGroup;
 			children = (
+				58A184632988ACF0007F6FFE /* Create */,
+				58DC4EBF29860A1A005FA09B /* Provider */,
 				58510713298337F600C666DC /* Model */,
 				585107002983304700C666DC /* AddMyClientApp.swift */,
-				58DC4EBF29860A1A005FA09B /* Provider */,
 				585107022983304700C666DC /* ContentView.swift */,
-				58A184632988ACF0007F6FFE /* Create */,
+				58A184642990178E007F6FFE /* NoContactsView.swift */,
 				583DB4DB298627E100152056 /* ContactDetailView.swift */,
 				583DB4D9298625CF00152056 /* ContactRowView.swift */,
 				5851070E2983307900C666DC /* ClientsDataModel.xcdatamodeld */,
@@ -190,6 +193,7 @@
 				585107122983375F00C666DC /* Contact.swift in Sources */,
 				583DB4DE29862CD300152056 /* CreateContactView.swift in Sources */,
 				583DB4DA298625CF00152056 /* ContactRowView.swift in Sources */,
+				58A184652990178E007F6FFE /* NoContactsView.swift in Sources */,
 				585107012983304700C666DC /* AddMyClientApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

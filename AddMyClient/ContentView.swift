@@ -17,20 +17,32 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(contacts) { contact in
-                    
-                    ZStack(alignment: .leading) {
-                        NavigationLink(destination: ContactDetailView(contact: contact)) {
-                            EmptyView()
+            
+            ZStack {
+                
+                if contacts.isEmpty {
+                    NoContactsView()
+                } else {
+                    List {
+                        ForEach(contacts) { contact in
+                            
+                            ZStack(alignment: .leading) {
+                                NavigationLink(destination: ContactDetailView(contact: contact)) {
+                                    EmptyView()
+                                }
+                                .opacity(0)
+                                ContactRowView(contact: contact)
+                            }
+                           
                         }
-                        .opacity(0)
-                        ContactRowView(contact: contact)
+                        
                     }
-                   
                 }
                 
+             
+                
             }
+          
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
@@ -60,5 +72,13 @@ struct ContentView_Previews: PreviewProvider {
             .onAppear { Contact.makePreview(count: 10, in: preview.viewContext)
                 
             }
+        let emptyPreview = ContactsProvider.shared
+        ContentView(provider: emptyPreview)
+            .environment(\.managedObjectContext, emptyPreview.viewContext)
+            .previewDisplayName("Contacts With No Data")
+                
+            }
     }
-}
+    
+    
+
