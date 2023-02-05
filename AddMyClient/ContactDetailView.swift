@@ -75,10 +75,10 @@ struct ContactDetailView: View {
 
 }
 
-//struct ContactDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationStack {
-//            ContactDetailView()
-//        }
-//    }
-//}
+struct ContactDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            ContactDetailView(contact: .preview())
+        }
+    }
+}

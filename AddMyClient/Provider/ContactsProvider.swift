@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 final class ContactsProvider {
     
@@ -26,6 +27,11 @@ final class ContactsProvider {
     
     private init() {
         persistentContainer = NSPersistentContainer(name: "ClientsDataModel")
+        
+        if EnvironmentValues.isPreview {
+            persistentContainer.persistentStoreDescriptions.first?.url = .init(fileURLWithPath: "/dev/null")
+        }
+        
          // MARK: - 3. file watches for changes and merges all changes
         persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
         
@@ -36,4 +42,10 @@ final class ContactsProvider {
         }
     }
     
+}
+ // MARK: - Setup for seperate previews
+extension EnvironmentValues {
+    static var isPreview: Bool {
+        return ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1"
+    }
 }

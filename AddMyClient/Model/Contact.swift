@@ -46,3 +46,33 @@ extension Contact {
     
 }
 
+extension Contact {
+    @discardableResult
+    static func makePreview(count: Int, in context: NSManagedObjectContext) -> [Contact] {
+        var contacts = [Contact]()
+        for i in 0..<count {
+            let contact = Contact(context: context)
+            contact.name = "item \(i)"
+            contact.companyName = "item \(i)"
+            contact.phoneNumber = "480-350-0024 \(i)"
+            contact.alternatePhone = "602-350-0024 \(i)"
+            contact.email = "test_ \(i)@mail.com"
+            contact.address = "item \(i)"
+            contact.city = "item \(i)"
+            contact.state = "item \(i)"
+            contact.zipcode = "item \(i)"
+            contact.notes = "This is a preview for item \(i)"
+            contacts.append(contact)
+        }
+        return contacts
+    }
+    
+    static func preview(context: NSManagedObjectContext = ContactsProvider.shared.viewContext) -> Contact {
+        return makePreview(count: 1, in: context)[0]
+    }
+    
+    static func empty(context: NSManagedObjectContext = ContactsProvider.shared.viewContext) -> Contact {
+        return Contact(context: context)
+    }
+}
+
