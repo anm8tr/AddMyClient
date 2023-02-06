@@ -47,7 +47,7 @@ struct CreateContactView: View {
                     
             }
         }
-        .navigationTitle("New Client")
+        .navigationTitle(vm.isNew ? "New Client" : "Update Contact")
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") {
