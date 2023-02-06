@@ -13,8 +13,9 @@ struct ContactRowView: View {
     
     @ObservedObject var contact: Contact
     
+    let provider: ContactsProvider
+    
     var body: some View {
-        
         VStack {
             Text(contact.name)
                 .font(.system(size: 26, design: .rounded).bold())
@@ -37,6 +38,7 @@ struct ContactRowView: View {
 
 struct ContactRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactRowView(contact: .preview())
+        let previewProvider = ContactsProvider.shared
+        ContactRowView(contact: .preview(context: previewProvider.viewContext), provider: previewProvider)
     }
 }
