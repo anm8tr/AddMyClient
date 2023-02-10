@@ -51,14 +51,8 @@ struct CreateContactView: View {
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") {
-                    do {
-                        try vm.save()
-                        dismiss()
-                    } catch {
-                        print(error)
-                    }
                      // MARK: - validate text fields extension
-                    //validate()
+                    validate()
                 }
             }
             ToolbarItem(placement: .navigationBarLeading) {
@@ -75,20 +69,20 @@ struct CreateContactView: View {
 }
 
  // MARK: - function to validate text fields
-//private extension CreateContactView {
-//    func validate() {
-//        if vm.contact.isValid {
-//            do {
-//                try vm.save()
-//                dismiss()
-//            } catch {
-//                print(error)
-//            }
-//        } else {
-//            hasError = true
-//        }
-//    }
-//}
+private extension CreateContactView {
+    func validate() {
+        if vm.contact.isValid {
+            do {
+                try vm.save()
+                dismiss()
+            } catch {
+                print(error)
+            }
+        } else {
+            hasError = true
+        }
+    }
+}
 
 struct CreateClientView_Previews: PreviewProvider {
     static var previews: some View {

@@ -24,11 +24,8 @@ final class Contact: NSManagedObject, Identifiable {
     
 
      // MARK: - check for empty text fields
-    var isValid: Bool {
-        !name.isEmpty &&
-        !phoneNumber.isEmpty &&
-        !email.isEmpty
-    }
+    var isValid: Bool { !name.isEmpty && !phoneNumber.isEmpty && !email.isEmpty }
+    
 }
 
 extension Contact {
