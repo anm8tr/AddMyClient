@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+struct SearchConfig: Equatable {
+    var query: String = ""
+}
+
 struct ContentView: View {
     
     @FetchRequest(fetchRequest: Contact.all()) private var contacts
     
     @State private var contactToEdit: Contact?
-    
+    @State private var searchConfig: SearchConfig = .init()
     var provider = ContactsProvider.shared
     
     var body: some View {
@@ -59,10 +63,9 @@ struct ContentView: View {
                     }
                 }
                 
-                
-                
             }
-            
+             // MARK: - add search modifier
+            .searchable(text: $searchConfig.query)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
@@ -82,6 +85,9 @@ struct ContentView: View {
             })
            
             .navigationTitle("Clients")
+            .onChange(of: searchConfig) { newValue in
+                contacts.nsPredicate = Contact.filter(newValue.query)
+            }
         }
     }
 }

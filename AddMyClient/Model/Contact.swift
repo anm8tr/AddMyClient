@@ -41,6 +41,10 @@ extension Contact {
         return request
     }
     
+    static func filter(_ query: String) -> NSPredicate {
+        query.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[cd] %@", query)
+    }
+    
 }
 
 extension Contact {
